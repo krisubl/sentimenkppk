@@ -392,7 +392,8 @@ with st.expander('Analisis CSV'):
 
 
     if upl:
-        df = pd.read_excel(upl)
+        df = pd.read_excel(upl, engine='xlrd')
+        
         # del df['Unnamed: 0']
         #2 ROW DIBAWAH di COMMENT DULU YA
         # df['score'] = df['tweets'].apply(score)
